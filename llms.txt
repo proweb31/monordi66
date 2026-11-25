@@ -1,0 +1,14 @@
+# MonOrdi66
+
+> Dépannage informatique et accompagnement numérique à domicile ou à distance, pour les particuliers, notamment les seniors et les débutants, à Canet-en-Roussillon, Perpignan et alentours.
+
+Interventions sur rendez-vous jusqu’à 75 km autour de Canet-en-Roussillon, selon la distance et la faisabilité. Tarifs et éventuels frais de déplacement annoncés avant intervention. Contact par téléphone au 06 15 78 20 30 ou par e-mail à proweb31@gmail.com.
+
+## Prestations et contact
+
+- [Dépannage informatique](https://monordi66.pages.dev/#services) : ordinateur, logiciels, Wi-Fi, imprimantes, smartphones et tablettes.
+- [Formation et accompagnement numérique](https://monordi66.pages.dev/#accompagnement) : informatique, initiation à ChatGPT et à l’intelligence artificielle.
+- [Tarifs et devis](https://monordi66.pages.dev/#tarifs) : prix confirmés avant intervention.
+- [Zone d’intervention](https://monordi66.pages.dev/#proximite) : Canet-en-Roussillon, Perpignan et environs.
+- [Questions fréquentes](https://monordi66.pages.dev/#questions) : informations pratiques.
+- [Contact](https://monordi66.pages.dev/#contact) : téléphone et e-mail pour demander une intervention.
