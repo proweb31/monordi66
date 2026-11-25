@@ -103,7 +103,27 @@
 <meta content="index,follow,max-image-preview:large" name="robots"/><meta content="summary" name="twitter:card"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><style>
 /* MonOrdi66 : lisibilité et accès au contact */
 .hero-lead,.section-head>p,.support-copy>p,.faq-items details p,.contact-copy>p{font-size:clamp(1.06rem,1.4vw,1.2rem);line-height:1.65}.faq-items summary{line-height:1.5;min-height:48px}.header-call,.nav a,.button,.price-action,.text-link{min-height:44px}.logo-name small{font-size:9px;letter-spacing:1px}.logo-mark{letter-spacing:-4px}.hero-actions .button-mint{white-space:normal}.contact-card input,.contact-card select,.contact-card textarea{font-size:16px}.mobile-call{min-height:48px}@media(max-width:480px){.logo-name strong{font-size:18px}.logo-name small{font-size:7px}.logo-mark{width:38px;height:38px}.hero-copy h1{overflow-wrap:normal}.hero-actions .button-mint{font-size:16px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head>
+</style><style id="monordi-screen-story">
+.computer-screen .story-slide{position:absolute;inset:42px 0 38px;display:grid;grid-template-columns:minmax(75px, .75fr) 1.5fr;align-items:center;gap:20px;padding:20px 24px;background:radial-gradient(ellipse at 21% 50%,#123e48 0%,#0b2633 38%,#091923 85%);z-index:3;overflow:hidden;opacity:0;pointer-events:none;transition:opacity .35s ease}
+.computer-screen .story-slide.is-visible{opacity:1}
+.story-visual{display:grid;place-items:center;position:relative;aspect-ratio:1;border:1px solid #459e96;border-radius:50%;box-shadow:0 0 0 8px #80f0d410,0 0 28px #80f0d42a;color:#80f0d4}
+.story-visual svg{width:66%;height:66%;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.story-slide.is-visible .story-visual{animation:storyIn .55s cubic-bezier(.22,1,.36,1) both}
+.story-slide.is-visible .story-text{animation:storyIn .55s .1s cubic-bezier(.22,1,.36,1) both}
+.story-text{min-width:0;color:#f4ffff}
+.story-text small{display:block;color:#80f0d4;font-size:10px;font-weight:800;letter-spacing:1.2px;margin-bottom:7px}
+.story-text strong{display:block;font:800 clamp(17px,2vw,28px)/1.12 Manrope,Arial,sans-serif;letter-spacing:-.7px}
+.story-text p{font-size:13px;line-height:1.4;color:#c4dbe0;margin:8px 0 0}
+.story-controls{display:flex;gap:6px;justify-content:center;align-items:center;position:relative;z-index:5;margin-top:13px}
+.story-controls button{background:#0d2e3a;color:#d9f6ef;border:1px solid #46736f;border-radius:22px;padding:0 12px;min-height:44px;min-width:44px;font-size:12px;font-weight:700}
+.story-controls button:hover,.story-controls button:focus-visible{border-color:#80f0d4;background:#17434b}
+.story-controls .story-count{color:#b8d5d8;font-size:11px;min-width:30px;text-align:center}
+.computer-panel .dark-replay{bottom:-18px}
+@keyframes storyIn{from{opacity:0;transform:translateY(9px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:700px){.computer-screen .story-slide{inset:35px 0 29px;padding:12px;gap:12px}.story-text small{font-size:8px;letter-spacing:.7px}.story-text strong{font-size:clamp(15px,4vw,23px)}.story-text p{font-size:11px}.story-controls{margin-top:8px}.computer-panel .dark-replay{bottom:-29px}}
+@media(prefers-reduced-motion:reduce){.computer-screen .story-slide{transition:none}.story-slide.is-visible .story-visual,.story-slide.is-visible .story-text{animation:none}}
+</style>
+</head>
 <body>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
 <div aria-hidden="true" class="progress"></div>
@@ -132,12 +152,12 @@
 <div aria-label="Animation illustrative d'un ordinateur qui passe d'une panne à un fonctionnement normal" class="computer-screen" role="img">
 <div class="screen-top"><span class="screen-dots"><i></i><i></i><i></i></span><span>MONORDI66 · ASSISTANCE</span><span class="screen-connection">● LIVE</span></div>
 <div class="screen-content"><div aria-hidden="true" class="screen-outline"><span class="screen-ring ring-a"></span><span class="screen-ring ring-b"></span><span class="screen-pulse">↗</span></div><div class="screen-state"><span class="state-label">VÉRIFICATION DU SYSTÈME</span><strong class="state-busy">Diagnostic en cours<span class="dots">...</span></strong><strong class="state-done">Système opérationnel <span>✓</span></strong><span class="screen-help">La bonne solution commence par un diagnostic précis.</span></div></div>
-<div aria-hidden="true" class="scanline"></div><div class="screen-bottom"><span><i></i>connexion sécurisée</span><span>ASSISTANCE • 66</span></div>
+<div class="story-slide" id="screenStory" aria-hidden="true"><div class="story-visual" id="storyIcon"></div><div class="story-text"><small id="storyLabel"></small><strong id="storyTitle"></strong><p id="storyDetail"></p></div></div><div aria-hidden="true" class="scanline"></div><div class="screen-bottom"><span><i></i>connexion sécurisée</span><span>ASSISTANCE • 66</span></div>
 </div>
 <div aria-hidden="true" class="screen-neck"></div><div aria-hidden="true" class="screen-base"></div>
 <div aria-hidden="true" class="floating-chip chip-one"><span>✓</span><div><strong>Diagnostic clair</strong><small>Comprendre avant d'agir</small></div></div>
 <div aria-hidden="true" class="floating-chip chip-two"><div class="signal-icon">⌁</div><div><strong>Solution trouvée</strong><small>Votre matériel, plus serein</small></div></div>
-<button aria-label="Rejouer l'animation de l'ordinateur" class="replay dark-replay" data-replay="computer" type="button">↺ <span>Revoir l'animation</span></button>
+<div class="story-controls" role="group" aria-label="Présentation animée des services"><button type="button" id="storyPrev" aria-label="Scène précédente">←</button><span class="story-count" id="storyCount" aria-hidden="true">1 / 5</span><button type="button" id="storyNext" aria-label="Scène suivante">→</button><button type="button" id="storyPause" aria-pressed="false">Pause</button></div><button aria-label="Rejouer la présentation de MonOrdi66" class="replay dark-replay" data-replay="computer" type="button">↺ <span>Revoir l'animation</span></button>
 </div>
 </div>
 <div class="hero-bottom container"><span><span class="mini-line"></span> Une informatique plus simple, chez vous.</span><a href="#services">DÉCOUVRIR <span>↓</span></a><span>PYRÉNÉES-ORIENTALES · FRANCE</span></div>
@@ -199,7 +219,7 @@
 <div class="fusion-perks"><div><span class="fusion-check">✓</span><span>Gratuit, sans inscription</span></div><div><span class="fusion-check">✓</span><span>Toutes les fusions se font par 3</span></div><div><span class="fusion-check">✓</span><span>15 % maximum, puis niveaux Prestige</span></div></div>
 <div class="fusion-how"><span class="fusion-how-line"></span><p><b>COMMENT JOUER ?</b><br/>Déplacez votre doigt ou votre souris et touchez la cuve pour lâcher une sphère. <strong>3 boules de même couleur</strong> → 1 module ; <strong>3 modules</strong> → 1 couronne ; <strong>3 couronnes</strong> → 1 %. Puis <strong>3 sphères identiques</strong> donnent le palier suivant. À <strong>15 %</strong>, jouez encore pour le Prestige. Les boules restantes s’empilent : gare au débordement !</p></div>
 <button class="fusion-start" id="fusionStart" type="button"><span aria-hidden="true" class="fusion-start-icon">▶</span><span id="fusionStartText">Jouer gratuitement</span><span aria-hidden="true">↗</span></button>
-<div class="fusion-secondary-buttons"><button class="fusion-link-button" id="fusionReset" type="button">↺ Recommencer</button><button aria-pressed="false" class="fusion-link-button" id="fusionSound" type="button">♪ Son désactivé</button></div>
+<div class="fusion-secondary-buttons"><button class="fusion-link-button" id="fusionReset" type="button">↺ Recommencer</button><button aria-pressed="false" class="fusion-link-button" id="fusionSound" type="button" aria-pressed="true">♫ Bruitages activés</button></div>
 </aside>
 <div aria-label="Jeu de fusion de sphères informatiques" class="fusion-machine">
 <div class="fusion-machine-eyebrow"><span class="fusion-live-dot"></span><span>FUSION LAB <i>66</i></span><span class="fusion-machine-dots">● ● ●</span></div>
@@ -337,7 +357,8 @@
   let balls=[],particles=[],rings=[],score=0,best=0,bestStage=0,combo=0,lastCombo=0;
   let coupon=0,prestigeBest=0,crownTriples=0,shots=0,nextBall={tier:0,color:0},bag=[],aim=W/2;
   let mode='ready',lastDrop=0,lastFrame=0,lastRender=0,animationId=0,remaining=0,overflow=0,physicsTicks=0;
-  let soundOn=false,audio=null,lastImpact=0,uid=0,noticeTimer=0,ready=false;
+  let soundOn=true,audio=null,lastImpact=0,uid=0,noticeTimer=0,ready=false;
+  try{soundOn=localStorage.getItem('monordi66_sound')!=='off'}catch{}
   try{best=Number(localStorage.getItem('proweb31_fusion_best')||0)||0;bestStage=Number(localStorage.getItem('proweb31_fusion_best_stage')||0)||0}catch{}
   const bounded=(v,min,max)=>Math.max(min,Math.min(max,v));
   function sampleBase(){if(!bag.length){bag=[0,0,1,1,2,2];for(let i=bag.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[bag[i],bag[j]]=[bag[j],bag[i]]}}return bag.pop()}
@@ -380,15 +401,15 @@
   function updateFill(){const aged=balls.filter(b=>b.age>32);const high=aged.length?Math.min(...aged.map(b=>b.y-b.r)):FLOOR;const used=bounded(Math.round((FLOOR-high)/(FLOOR-DANGER)*100),0,100);text(ui.fill,`${used} %`);ui.fillBar.style.width=`${used}%`;ui.fillBar.classList.toggle('is-danger',used>=80)}
   function preview(){balls=[create(0,68,FLOOR-19,0),create(0,111,FLOOR-19,1),create(0,154,FLOOR-19,2),create(0,197,FLOOR-19,0),create(0,240,FLOOR-19,2),create(0,283,FLOOR-19,1),create(0,326,FLOOR-19,0),create(1,153,FLOOR-70),create(1,217,FLOOR-70)];for(const b of balls)b.age=90;
     particles=[];rings=[];score=0;coupon=0;prestigeBest=0;crownTriples=0;combo=0;shots=0;bag=[];nextBall={tier:0,color:1};mode='ready';overflow=0;updateFill();scoreUI();updateReward();showNext();notify('LE DÉFI EST PRÊT','Chaque niveau se gagne par 3 fusions. La cuve est plus courte.',0);text(ui.startText,'Jouer gratuitement')}
-  function start(){balls=[];particles=[];rings=[];score=0;coupon=0;prestigeBest=0;crownTriples=0;combo=0;shots=0;overflow=0;physicsTicks=0;bag=[];nextBall=rollNext();mode='playing';remaining=0;lastFrame=performance.now();lastDrop=0;scoreUI();updateFill();updateReward();showNext();removeNotice();text(ui.startText,'Lâcher une boule');canvas.focus({preventScroll:true});schedule()}
-  function lose(){mode='over';notify('DÉBORDEMENT · PARTIE TERMINÉE',`Score : ${score.toLocaleString('fr-FR')} · Meilleure remise : ${coupon}% · Prestige ${prestigeBest}`,0);text(ui.startText,'Recommencer une partie');updateFill();draw()}
+  function start(){tone(440,.11,.020,0,'sine',1.03);tone(660,.14,.016,.09,'sine',1.03);balls=[];particles=[];rings=[];score=0;coupon=0;prestigeBest=0;crownTriples=0;combo=0;shots=0;overflow=0;physicsTicks=0;bag=[];nextBall=rollNext();mode='playing';remaining=0;lastFrame=performance.now();lastDrop=0;scoreUI();updateFill();updateReward();showNext();removeNotice();text(ui.startText,'Lâcher une boule');canvas.focus({preventScroll:true});schedule()}
+  function lose(){tone(330,.18,.023,0,'triangle',.9);tone(220,.25,.018,.14,'sine',.7);mode='over';notify('DÉBORDEMENT · PARTIE TERMINÉE',`Score : ${score.toLocaleString('fr-FR')} · Meilleure remise : ${coupon}% · Prestige ${prestigeBest}`,0);text(ui.startText,'Recommencer une partie');updateFill();draw()}
   function drop(x=aim){if(mode!=='playing'){start();return}const now=performance.now();if(now-lastDrop<380)return;
     const d=nextBall;const probe=fromSpec(d,0,0);const releaseX=bounded(x,LEFT+probe.r,RIGHT-probe.r);
     if(balls.some(b=>b.age>25&&Math.hypot(b.x-releaseX,b.y-32)<b.r+probe.r+3)){notify('PLACE INSUFFISANTE','Déplacez le tir ou évitez de dépasser la ligne orange.',850);return}
-    lastDrop=now;const b=fromSpec(d,releaseX,32);b.vx=(Math.random()-.5)*.11;balls.push(b);shots++;nextBall=rollNext();showNext();if(soundOn)tone(270,.025,.016)}
+    lastDrop=now;const b=fromSpec(d,releaseX,32);b.vx=(Math.random()-.5)*.11;balls.push(b);shots++;nextBall=rollNext();showNext();if(soundOn)tone(340,.055,.016,0,'triangle',.62)}
   function comboScore(p){const now=performance.now();combo=now-lastCombo<1300?combo+1:1;lastCombo=now;score+=Math.round(p*(1+Math.min(3,combo-1)*.2));if(score>best){best=score;try{localStorage.setItem('proweb31_fusion_best',String(best))}catch{}}scoreUI()}
-  function tone(freq,dur=.085,vol=.018){if(!soundOn)return;try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();if(audio.state==='suspended')audio.resume();const o=audio.createOscillator(),g=audio.createGain();o.type='sine';o.frequency.setValueAtTime(freq,audio.currentTime);o.frequency.exponentialRampToValueAtTime(freq*.68,audio.currentTime+dur);g.gain.setValueAtTime(vol,audio.currentTime);g.gain.exponentialRampToValueAtTime(.0001,audio.currentTime+dur);o.connect(g).connect(audio.destination);o.start();o.stop(audio.currentTime+dur)}catch{}}
-  function impact(v){const now=performance.now();if(soundOn&&v>1.9&&now-lastImpact>100){lastImpact=now;tone(180+Math.min(v,8)*35,.04,.008)}}
+  function tone(freq,dur=.085,vol=.018,delay=0,kind='sine',endRatio=.68){if(!soundOn)return;try{audio=audio||new(window.AudioContext||window.webkitAudioContext)();if(audio.state==='suspended')audio.resume();const o=audio.createOscillator(),g=audio.createGain();const at=audio.currentTime+delay;o.type=kind;o.frequency.setValueAtTime(freq,at);o.frequency.exponentialRampToValueAtTime(freq*endRatio,at+dur);g.gain.setValueAtTime(.0001,at);g.gain.linearRampToValueAtTime(vol,at+.008);g.gain.exponentialRampToValueAtTime(.0001,at+dur);o.connect(g).connect(audio.destination);o.start(at);o.stop(at+dur+.01)}catch{}}
+  function impact(v){const now=performance.now();if(soundOn&&v>1.9&&now-lastImpact>100){lastImpact=now;tone(115+Math.min(v,8)*22,.055,Math.min(.018,.004+v*.0015),0,'triangle',.57)}}
   function splash(x,y,big=false){rings.push({x,y,r:big?34:20,life:1});if(reduce)return;const count=big?25:12;for(let i=0;i<count;i++){const a=Math.random()*Math.PI*2,sp=1+Math.random()*3;particles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-.6,life:1,sz:1+Math.random()*2,c:big?'#ffe1a6':'#5df8ee'})}}
   const matching=(a,b)=>a.tier===b.tier&&(a.tier!==0||a.color===b.color)&&(a.tier!==3||a.discount===b.discount)&&(a.tier!==4||a.prestige===b.prestige);
   const touching=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y)<=a.r+b.r+3.5;
@@ -407,7 +428,7 @@
     else if(first.tier===3){discount=({1:2,2:5,5:10,10:15})[first.discount]||0;if(discount)tier=3;else{tier=4;prestige=1}}
     else{tier=4;prestige=first.prestige+1}
     const ball=create(tier,x,y,0,discount,prestige);ball.x=bounded(ball.x,LEFT+ball.r,RIGHT-ball.r);ball.y=bounded(ball.y,ball.r+20,FLOOR-ball.r);ball.vx=(items[0].vx+items[1].vx+items[2].vx)*.16;ball.vy=-1.5;ball.glow=1;balls.push(ball);
-    splash(x,y,tier>=3);comboScore(tier===1?80:tier===2?270:tier===3?500+discount*80:950+prestige*130);tone(tier>=3?820:580,.17,.037);
+    splash(x,y,tier>=3);comboScore(tier===1?80:tier===2?270:tier===3?500+discount*80:950+prestige*130);const base=tier>=3?523:tier===2?440:392;tone(base,.15,.025,0,'sine',1.02);tone(base*1.5,.19,.019,.06,'sine',1.02);if(tier>=2)tone(base*2,.24,.015,.12,'sine',1.01);
     if(discount>coupon){coupon=discount;bestStage=Math.max(bestStage,coupon);try{localStorage.setItem('proweb31_fusion_best_stage',String(bestStage))}catch{}updateReward();if(coupon===15)notify('15 % MAXIMUM ATTEINT !','Continuez à jouer pour débloquer le Prestige et battre votre score.',2350);else notify(`RÉCOMPENSE · ${coupon}%`,'Toutes les fusions se font par 3.',900)}
     if(tier===4){prestigeBest=Math.max(prestigeBest,prestige);updateReward();notify(`PRESTIGE ${prestige} DÉBLOQUÉ`,'Le plafond commercial reste fixé à 15 %. Continuez jusqu’au débordement.',1650)}
     return true;
@@ -471,10 +492,50 @@
   canvas.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;aim=xFromEvent(e);if(mode!=='playing')start();else drop(aim);schedule()});
   canvas.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight',' ','Enter'].includes(e.key)){e.preventDefault();if(e.key==='ArrowLeft')aim=bounded(aim-20,35,W-35);else if(e.key==='ArrowRight')aim=bounded(aim+20,35,W-35);else mode==='playing'?drop(aim):start();schedule()}});
   ui.start.addEventListener('click',()=>{mode==='playing'?drop(aim):start()});ui.reset.addEventListener('click',start);
-  ui.sound.addEventListener('click',()=>{soundOn=!soundOn;ui.sound.setAttribute('aria-pressed',String(soundOn));text(ui.sound,soundOn?'♫ Bruitages activés':'♪ Activer les bruitages');if(soundOn)tone(540,.09,.025)});
+  function syncSound(){ui.sound.setAttribute('aria-pressed',String(soundOn));text(ui.sound,soundOn?'♫ Bruitages activés':'♪ Activer les bruitages')}syncSound();
+  ui.sound.addEventListener('click',()=>{soundOn=!soundOn;try{localStorage.setItem('monordi66_sound',soundOn?'on':'off')}catch{}syncSound();if(soundOn)tone(540,.09,.025);else if(audio)audio.suspend().catch(()=>{})});
   document.addEventListener('visibilitychange',()=>{if(mode==='playing'&&document.visibilityState==='visible'){lastFrame=performance.now();schedule()}});
   if('IntersectionObserver'in window){new IntersectionObserver((entries,obs)=>{if(entries.some(e=>e.isIntersecting)){preview();draw();ready=true;obs.disconnect()}},{rootMargin:'240px'}).observe(canvas)}else{preview();draw();ready=true}
 })();
 
+</script>
+
+<script id="monordi-story-script">
+(() => {
+  'use strict';
+  const panel=document.querySelector('[data-anim="computer"]'), screen=document.getElementById('screenStory');
+  if(!panel||!screen)return;
+  const label=document.getElementById('storyLabel'),title=document.getElementById('storyTitle'),detail=document.getElementById('storyDetail'),visual=document.getElementById('storyIcon'),count=document.getElementById('storyCount'),pause=document.getElementById('storyPause');
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const icons=[
+    '',
+    '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8m-4-4v4m-4-10 3 3 5-5"/>',
+    '<path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+    '<path d="M4 6h16v12H4zM8 6V3h8v3M7 12h10m-10 3h6"/>',
+    '<path d="M4 5h16v14H4zM8 9h8m-8 4h5m4 0v3m-1.5-1.5h3"/>'
+  ];
+  const scenes=[
+    null,
+    ['01 · DÉPANNAGE','PC, Wi-Fi, imprimante','À domicile ou à distance, selon votre besoin.'],
+    ['02 · ZONE D’INTERVENTION','Jusqu’à 75 km','Autour de Canet-en-Roussillon et Perpignan, sur rendez-vous.'],
+    ['03 · PRIX & DEVIS','Un prix annoncé','Tarif et frais éventuels confirmés avant toute intervention.'],
+    ['04 · ACCOMPAGNEMENT','Informatique & IA','Cours pour débutants, seniors et initiation à ChatGPT.']
+  ];
+  let i=0,timer=0,visible=false,paused=reduced.matches,finished=false;
+  const clear=()=>{clearTimeout(timer);timer=0};
+  function sync(){pause.textContent=paused||finished?'Lecture':'Pause';pause.setAttribute('aria-pressed',String(paused||finished))}
+  function show(n){i=(n+scenes.length)%scenes.length;count.textContent=(i+1)+' / '+scenes.length;if(!i){screen.classList.remove('is-visible');return}const s=scenes[i];screen.classList.remove('is-visible');label.textContent=s[0];title.textContent=s[1];detail.textContent=s[2];visual.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24">'+icons[i]+'</svg>';void screen.offsetWidth;screen.classList.add('is-visible')}
+  function queue(){clear();if(paused||finished||!visible||document.hidden)return;timer=setTimeout(()=>{if(i===scenes.length-1){finished=true;sync();return}show(i+1);queue()},i===0?3500:5200)}
+  function reset(){clear();finished=false;paused=reduced.matches;show(0);sync();queue()}
+  function step(n){clear();finished=false;paused=true;show(n);sync()}
+  document.getElementById('storyPrev').addEventListener('click',()=>step(i-1));
+  document.getElementById('storyNext').addEventListener('click',()=>step(i+1));
+  pause.addEventListener('click',()=>{if(finished){finished=false;show(0)}else paused=!paused;sync();queue()});
+  panel.querySelector('[data-replay="computer"]').addEventListener('click',reset);
+  if('IntersectionObserver' in window){new IntersectionObserver(entries=>{visible=entries.some(e=>e.isIntersecting);if(visible)queue();else clear()},{threshold:.28}).observe(panel)}else{visible=true;queue()}
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)clear();else queue()});
+  reduced.addEventListener?.('change',()=>{if(reduced.matches){paused=true;clear();sync()}});
+  sync();
+})();
 </script>
 </body></html>
